@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+  function newUl(event){
+    $(event.target).append(
+      $('<ul>')
+        .append(
+            $('<li>').append($('<a>').text('1'))))
+  };
+
+  function removeUl(event){
+    $(event.target).remove()
+  };
+
+  $(document).ready(function(){
+    $("li").mouseenter(newUl);
+    $("li").mouseout(removeUl())
+};
+
+});
+
+  </script>
+
+
+</head>
+
+<body>
+
+<nav>
+
+  <ul>
+
+      <li> <a href="#"> Hjem!</a></li>
+
+      <li> <a href="#"> Produkter</a>
+
+          <ul>
+                  <li> <a href="#"> Tjeneste 1</a></li>
+
+                  <li> <a href="#"> Tjeneste 2</a></li>
+
+                  <li> <a href="#"> Tjeneste  3</a></li>
+
+          </ul>
+
+      </li>
+
+      <li> <a href="#"> Om oss</a></li>
+
+      <li> <a href="#"> Bonus</a></li>
+
+  </ul>
+
+</nav>
+
+
+
+
+</body>
+
+
+
+</html>
