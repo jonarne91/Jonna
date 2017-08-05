@@ -18,7 +18,7 @@ flex: 1 1 100%;
 /* Main navigation */
 nav > ul {
 display: flex;
-flex: 1 1 100%;
+flex: 0 1 100%;
 }
 
 /* Main navigation */
@@ -32,13 +32,12 @@ margin: 2px;
 /* Main navigation */
 nav > ul > li > a {
 display: flex;
-
+flex: 1 1 100%;
 }
 
 /* Main navigation: Hover display dropdown*/
 li:hover > ul > li {
 display: flex;
-
 }
 
 /* Dropdown navigation */
@@ -46,6 +45,7 @@ nav > ul > li > ul {
 position: absolute;
 top: 100%;
 flex-flow: column wrap;
+flex: 1 1 100%;
 }
 
 /* Dropdown navigation */
@@ -55,6 +55,7 @@ border: 1px solid black;
 margin: 2px;
 flex: 1 1 100%;
 position: relative;
+flex: 1 1 100%;
 
 }
 
@@ -64,8 +65,11 @@ display: flex;
 flex: 1 1 100%;
 }
 
+
+/* Dropdown: Hover, shows 2. Dropdown */
 li:hover > ul > li  {
 display: flex;
+
 }
 
  /* 2. Dropdown navigation */
@@ -73,7 +77,7 @@ nav > ul > li > ul > li > ul {
 position: absolute;
 left: 100%;
 flex-flow: column wrap;
-
+flex: 1 1 100%;
 }
 
 /* 2. Dropdown navigation */
@@ -82,11 +86,12 @@ nav > ul > li > ul > li > ul > li {
   display: flex;
   display: none; /* none */
   border: 1px solid;
+  flex: 1 1 100%;
   margin: 2px;
 }
 
 /* 2. Dropdown navigation */
 nav > ul > li > ul > li > ul > li > a {
 display: flex;
-
+flex: 1 1 100%;
 }

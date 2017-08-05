@@ -9,19 +9,23 @@
     $(event.target).append(
       $('<ul>')
         .append(
-            $('<li>').append($('<a>').text('1'))))
+            $('<li>')
+        .append(
+            $('<a>').attr('href','#home').text('1')
+    )))
   };
 
-  function removeUl(event){
-    $(event.target).remove()
-  };
+  function removeUl(){
+     $("nav > ul > li > ul > li > ul").remove()
+   };
+
 
   $(document).ready(function(){
-    $("li").mouseenter(newUl);
-    $("li").mouseout(removeUl())
-};
+    $("nav > ul > li > ul > * ").mouseenter(newUl);
+    $("nav > ul > li > ul > li > ul ").mouseout(removeUl);
 
 });
+
 
   </script>
 
@@ -56,9 +60,10 @@
   </ul>
 
 </nav>
+<p>
 
 
-
+  </p>
 
 </body>
 
